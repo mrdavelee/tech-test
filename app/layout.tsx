@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,7 +31,14 @@ export default function RootLayout({
 
         <div className="page-wrapper">
           <Header />
-          {children}
+
+            <h2 className="text-4xl text-center pt-5 pb-10">
+              Welcome to Dave&apos;s Star Wars DB. Filter your results by clicking a button below
+            </h2>
+
+            {children}
+
+          <Footer/>
         </div>
       </body>
     </html>
