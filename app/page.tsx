@@ -1,11 +1,21 @@
-import { StartButtons } from "@/components/start-buttons";
+'use client'
 
-export default function Home() {
+import { useState } from 'react';
+import Characters from './api/characters';
+import SearchForm from './api/search';
+
+const App = () => {
+  const [query, setQuery] = useState<string>('');
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-8 pb-20 gap-16 font-[family-name:var(--font-geist-sans)]">
-      
-        <StartButtons />
-      
+    <div className='w-3/4 mx-auto'>
+      <SearchForm onSubmit={(search) => setQuery(search)}></SearchForm>
+      <Characters query={query}></Characters>
     </div>
   );
-}
+};
+
+export default App;
+
+
+
+
