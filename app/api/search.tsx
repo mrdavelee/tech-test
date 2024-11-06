@@ -24,7 +24,7 @@ const SearchForm: FC<SearchFormProps> = ({ onSubmit }) => {
   return (
     <form className='flex justify-center' onSubmit={handleSubmit}>
       
-        <input className='border px-4 py-2 mb-10 text-center border-spacing-2 rounded-[2rem]' type="search" placeholder="Start your search" value={search} onChange={(e) => setSearch(e.currentTarget.value)} />
+        <input className='border w-96 px-4 py-2 mb-10 text-center border-spacing-2 rounded-[2rem]' type="search" placeholder="Start your search" value={search} onChange={(e) => setSearch(e.currentTarget.value)} />
       
     </form>
   );

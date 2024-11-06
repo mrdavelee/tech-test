@@ -66,7 +66,7 @@ const Characters: FC<CharactersProps> = ({ query }) => {
     <>
       {!loadingCharacters ? (
         <>
-         <div className='grid grid-cols-5 gap-4 mb-6'>
+         <div className='grid grid-cols-5 gap-4 mb-10'>
 
             {charactersPage!.results.map((character) => (
 
@@ -80,7 +80,7 @@ const Characters: FC<CharactersProps> = ({ query }) => {
 
                     <CardContent className="grid gap-4">
                             
-                        <div className="flex-1 space-y-1">
+                        <div className="flex-1 space-y-1 text-lg">
                             <p>Gender: {character.gender}</p>
                             <p>Weight: {character.mass}</p>
                             <p>Eye colour: {character.eye_color}</p>
@@ -93,14 +93,14 @@ const Characters: FC<CharactersProps> = ({ query }) => {
 
                 ))}
          </div>
-          <div className='w-full flex justify-center gap-4'>
-            <Button variant="outline" className='prev-button' onClick={handlePrev} disabled={page === 1}>
+          <div className='w-full flex items-center justify-center gap-4 mb-16'>
+            <Button variant="paging" className='prev-button' onClick={handlePrev} disabled={page === 1}>
               Prev
             </Button>
-            <span>
+            <span className='text-white'>
               {page} of {totalPages}
             </span>
-            <Button variant="outline" className='next-button' onClick={handleNext} disabled={page === totalPages}>
+            <Button variant="paging" className='next-button' onClick={handleNext} disabled={page === totalPages}>
               Next
             </Button>
           </div>
