@@ -30,7 +30,7 @@ export default function RootLayout({
           <Header />
 
             <h2 className=" text-white text-4xl text-center pt-5 pb-10">
-              Welcome to Dave&apos;s Star Wars DB. Filter your results by clicking a button below
+              Welcome to Dave&apos;s Star Wars DB. Search the characters below.
             </h2>
 
             {children}
