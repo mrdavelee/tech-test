@@ -36,7 +36,7 @@ type CharactersProps = {
 const Characters: FC<CharactersProps> = ({ query }) => {
   const [page, setPage] = useState<number>(1);
   const [loadingCharacters, charactersPage] = useGet< PageResponse < Array < Character > >
-  >('https://swapi.tech/api/people', { search: query, page: page.toString() });
+  >('https://swapi.dev/api/people', { search: query, page: page.toString() });
   // swapi gives 10 results per page
   const totalPages =
     charactersPage && charactersPage!.count > 10
